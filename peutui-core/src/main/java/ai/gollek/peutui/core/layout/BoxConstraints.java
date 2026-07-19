@@ -12,6 +12,10 @@ public record BoxConstraints(int minWidth, int maxWidth, int minHeight, int maxH
         return new BoxConstraints(size.width(), size.width(), size.height(), size.height());
     }
 
+    public static BoxConstraints tight(int width, int height) {
+        return new BoxConstraints(width, width, height, height);
+    }
+
     public static BoxConstraints loose(int maxWidth, int maxHeight) {
         return new BoxConstraints(0, maxWidth, 0, maxHeight);
     }

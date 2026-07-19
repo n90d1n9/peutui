@@ -40,6 +40,26 @@ public final class AnsiCodes {
     public static final String BRIGHT_CYAN = "\u001b[96m";
     public static final String BRIGHT_WHITE = "\u001b[97m";
 
+    // Background colors
+    public static final String BG_BLACK = "\u001b[40m";
+    public static final String BG_RED = "\u001b[41m";
+    public static final String BG_GREEN = "\u001b[42m";
+    public static final String BG_YELLOW = "\u001b[43m";
+    public static final String BG_BLUE = "\u001b[44m";
+    public static final String BG_MAGENTA = "\u001b[45m";
+    public static final String BG_CYAN = "\u001b[46m";
+    public static final String BG_WHITE = "\u001b[47m";
+    
+    // Dark background colors (bright variants)
+    public static final String BG_DARK_GRAY = "\u001b[100m";
+    public static final String BG_BRIGHT_RED = "\u001b[101m";
+    public static final String BG_BRIGHT_GREEN = "\u001b[102m";
+    public static final String BG_BRIGHT_YELLOW = "\u001b[103m";
+    public static final String BG_BRIGHT_BLUE = "\u001b[104m";
+    public static final String BG_BRIGHT_MAGENTA = "\u001b[105m";
+    public static final String BG_BRIGHT_CYAN = "\u001b[106m";
+    public static final String BG_BRIGHT_WHITE = "\u001b[107m";
+
     private AnsiCodes() {
     }
 

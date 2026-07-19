@@ -191,14 +191,14 @@ public class StatsDashboardComponent implements Component {
             }
 
             // Check for ESC
-            if (keyEvent.code() == KeyCode.ESC) {
+            if (keyEvent.code() == KeyCode.ESCAPE) {
                 return false;
             }
 
-            if (keyEvent.code() == KeyCode.UP_ARROW) {
+            if (keyEvent.code() == KeyCode.UP) {
                 scrollUp();
                 return true;
-            } else if (keyEvent.code() == KeyCode.DOWN_ARROW) {
+            } else if (keyEvent.code() == KeyCode.DOWN) {
                 scrollDown(100); // Adjust based on content
                 return true;
             }
@@ -255,7 +255,7 @@ public class StatsDashboardComponent implements Component {
                 if (keyChar == 'q' || keyChar == 'Q') {
                     return false;
                 }
-                if (keyEvent.code() == KeyCode.ESC) {
+                if (keyEvent.code() == KeyCode.ESCAPE) {
                     return false;
                 }
             }
@@ -328,8 +328,20 @@ public class StatsDashboardComponent implements Component {
         }
 
         @Override
-        public boolean handleKey(int keyCode, char keyChar) {
-            return keyChar == 'q' || keyChar == 'Q' || keyCode == 27;
+        public boolean handleInput(InputEvent event) {
+            if (event instanceof tech.kayys.peutui.core.event.KeyEvent keyEvent) {
+                char keyChar = keyEvent.isCharacter() && keyEvent.character().length() == 1
+                        ? keyEvent.character().charAt(0)
+                        : 0;
+
+                if (keyChar == 'q' || keyChar == 'Q') {
+                    return false;
+                }
+                if (keyEvent.code() == KeyCode.ESCAPE) {
+                    return false;
+                }
+            }
+            return true; // Consume other events
         }
     }
 }

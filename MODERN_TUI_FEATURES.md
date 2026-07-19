@@ -287,10 +287,10 @@ public class MyTheme {
 ### Full Chat Application
 
 ```java
-import ai.gollek.peutui.agent.api.Agent;
-import ai.gollek.peutui.widgets.*;
-import ai.gollek.peutui.core.app.App;
-import ai.gollek.peutui.core.component.Component;
+import tech.kayys.peutui.agent.api.Agent;
+import tech.kayys.peutui.widgets.*;
+import tech.kayys.peutui.core.app.App;
+import tech.kayys.peutui.core.component.Component;
 
 public class ChatApp extends App {
     private final Agent agent;

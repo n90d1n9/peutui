@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ai.gollek.peutui</groupId>
+  <groupId>tech.kayys.peutui</groupId>
   <artifactId>peutui-parent</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Peutui :: Parent</name>
   <description>
@@ -54,52 +54,52 @@
 
       <!-- Internal modules -->
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-terminal</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-agent-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-provider-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-project-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-session-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-settings-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-storage-api</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-widgets</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>ai.gollek.peutui</groupId>
+        <groupId>tech.kayys.peutui</groupId>
         <artifactId>peutui-quarkus-runtime</artifactId>
         <version>${project.version}</version>
       </dependency>

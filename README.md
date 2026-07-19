@@ -17,7 +17,7 @@ by writing plain CDI beans (`Agent`, `ModelProvider`) or by setting one
 
 ```xml
 <dependency>
-    <groupId>ai.gollek.peutui</groupId>
+    <groupId>tech.kayys.peutui</groupId>
     <artifactId>peutui-widgets</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -26,9 +26,9 @@ by writing plain CDI beans (`Agent`, `ModelProvider`) or by setting one
 ### 2. Create Your First Component
 
 ```java
-import ai.gollek.peutui.widgets.HeaderComponent;
-import ai.gollek.peutui.core.app.App;
-import ai.gollek.peutui.core.component.Component;
+import tech.kayys.peutui.widgets.HeaderComponent;
+import tech.kayys.peutui.core.app.App;
+import tech.kayys.peutui.core.component.Component;
 
 public class MyApp extends App {
     @Override

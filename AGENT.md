@@ -22,14 +22,14 @@ A comprehensive guide for integrating Peutui with AI agents, building agentic TU
 ### Minimal Agent Application
 
 ```java
-import ai.gollek.peutui.agent.api.Agent;
-import ai.gollek.peutui.agent.api.AgentEvent;
-import ai.gollek.peutui.widgets.ChatBoxComponent;
-import ai.gollek.peutui.widgets.ChatInputComponent;
-import ai.gollek.peutui.widgets.HeaderComponent;
-import ai.gollek.peutui.core.app.App;
-import ai.gollek.peutui.core.component.Component;
-import ai.gollek.peutui.core.layout.VerticalStackComponent;
+import tech.kayys.peutui.agent.api.Agent;
+import tech.kayys.peutui.agent.api.AgentEvent;
+import tech.kayys.peutui.widgets.ChatBoxComponent;
+import tech.kayys.peutui.widgets.ChatInputComponent;
+import tech.kayys.peutui.widgets.HeaderComponent;
+import tech.kayys.peutui.core.app.App;
+import tech.kayys.peutui.core.component.Component;
+import tech.kayys.peutui.core.layout.VerticalStackComponent;
 
 public class SimpleAgentApp extends App {
     
@@ -150,8 +150,8 @@ Peutui uses strategy interfaces for all varying axes:
 ### Creating a Custom Agent
 
 ```java
-import ai.gollek.peutui.agent.api.Agent;
-import ai.gollek.peutui.agent.api.AgentEvent;
+import tech.kayys.peutui.agent.api.Agent;
+import tech.kayys.peutui.agent.api.AgentEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import java.util.concurrent.Flow;
 
@@ -214,8 +214,8 @@ peutui.provider.default-provider-id=anthropic
 ### Capability-Based Routing
 
 ```java
-import ai.gollek.peutui.agent.api.Agent;
-import ai.gollek.peutui.agent.api.AgentOrchestrationStrategy;
+import tech.kayys.peutui.agent.api.Agent;
+import tech.kayys.peutui.agent.api.AgentOrchestrationStrategy;
 import java.util.List;
 import java.util.Map;
 
@@ -295,8 +295,8 @@ peutui.agent.router=capability-based  # or round-robin
 ### Registering a Provider
 
 ```java
-import ai.gollek.peutui.provider.api.ModelProvider;
-import ai.gollek.peutui.provider.api.StreamingToken;
+import tech.kayys.peutui.provider.api.ModelProvider;
+import tech.kayys.peutui.provider.api.StreamingToken;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
@@ -362,9 +362,9 @@ peutui.provider.failover-order=anthropic,openai,local-gollek
 ### Handling Streaming Tokens
 
 ```java
-import ai.gollek.peutui.core.streaming.StreamingToken;
-import ai.gollek.peutui.core.streaming.StreamingRenderer;
-import ai.gollek.peutui.widgets.MarkdownStreamComponent;
+import tech.kayys.peutui.core.streaming.StreamingToken;
+import tech.kayys.peutui.core.streaming.StreamingRenderer;
+import tech.kayys.peutui.widgets.MarkdownStreamComponent;
 
 public class StreamingChatHandler {
     
@@ -411,8 +411,8 @@ public class StreamingChatHandler {
 ### Custom Streaming Renderer
 
 ```java
-import ai.gollek.peutui.core.streaming.StreamingRenderer;
-import ai.gollek.peutui.core.streaming.StreamingToken;
+import tech.kayys.peutui.core.streaming.StreamingRenderer;
+import tech.kayys.peutui.core.streaming.StreamingToken;
 
 public class CodeStreamingRenderer extends StreamingRenderer<StreamingToken> {
     
@@ -459,9 +459,9 @@ public class CodeStreamingRenderer extends StreamingRenderer<StreamingToken> {
 ### Session Lifecycle
 
 ```java
-import ai.gollek.peutui.session.api.Session;
-import ai.gollek.peutui.session.api.SessionManager;
-import ai.gollek.peutui.session.api.Message;
+import tech.kayys.peutui.session.api.Session;
+import tech.kayys.peutui.session.api.SessionManager;
+import tech.kayys.peutui.session.api.Message;
 
 public class SessionHandler {
     
@@ -517,8 +517,8 @@ peutui.storage.database.url=jdbc:sqlite:peutui.db
 ### Defining Tools
 
 ```java
-import ai.gollek.peutui.agent.api.Tool;
-import ai.gollek.peutui.agent.api.ToolResult;
+import tech.kayys.peutui.agent.api.Tool;
+import tech.kayys.peutui.agent.api.ToolResult;
 
 public class FileSystemTool implements Tool {
     
@@ -555,8 +555,8 @@ public class FileSystemTool implements Tool {
 ### Tool Call Visualization
 
 ```java
-import ai.gollek.peutui.widgets.PanelComponent;
-import ai.gollek.peutui.core.text.AnsiCodes;
+import tech.kayys.peutui.widgets.PanelComponent;
+import tech.kayys.peutui.core.text.AnsiCodes;
 
 public class ToolCallInspector {
     
@@ -666,8 +666,8 @@ public class ContextWindowIndicator implements Component {
 ### Slash Command Handler
 
 ```java
-import ai.gollek.peutui.widgets.CommandPaletteComponent;
-import ai.gollek.peutui.widgets.CommandItem;
+import tech.kayys.peutui.widgets.CommandPaletteComponent;
+import tech.kayys.peutui.widgets.CommandItem;
 
 public class SlashCommandHandler {
     

@@ -11,7 +11,68 @@ implementations; a host application picks concrete implementations either
 by writing plain CDI beans (`Agent`, `ModelProvider`) or by setting one
 `application.properties` value per axis.
 
-## Module map
+## Quick Start
+
+### 1. Add Dependency
+
+```xml
+<dependency>
+    <groupId>ai.gollek.peutui</groupId>
+    <artifactId>peutui-widgets</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### 2. Create Your First Component
+
+```java
+import ai.gollek.peutui.widgets.HeaderComponent;
+import ai.gollek.peutui.core.app.App;
+import ai.gollek.peutui.core.component.Component;
+
+public class MyApp extends App {
+    @Override
+    protected Component buildUI() {
+        HeaderComponent header = new HeaderComponent("My App", "Welcome");
+        header.addTab("Home", this::showHome);
+        header.addTab("About", this::showAbout);
+        return header;
+    }
+}
+```
+
+### 3. Run the Application
+
+```bash
+java -jar your-app.jar
+```
+
+Press `Ctrl+C` to exit.
+
+## Architecture Overview
+
+Peutui follows a layered architecture:
+
+```
+┌─────────────────────────────────────┐
+│         Your Application            │
+├─────────────────────────────────────┤
+│         peutui-widgets              │  ← UI Components (Header, ChatBox, etc.)
+├─────────────────────────────────────┤
+│         peutui-core                 │  ← Core Engine (Rendering, Events, Layout)
+├─────────────────────────────────────┤
+│      peutui-terminal                │  ← Terminal Driver (JLine backend)
+└─────────────────────────────────────┘
+```
+
+**Key Design Principles:**
+
+1. **Framework Agnostic**: Works with any Java framework or standalone
+2. **Strategy Pattern**: All varying axes use interchangeable strategies
+3. **Zero Opinions**: Core doesn't know about agents, sessions, or providers
+4. **CDI Optional**: Quarkus integration is a convenience layer, not required
+
+## Module Map
 
 | Module | What it owns |
 |---|---|
@@ -96,6 +157,12 @@ any code.
   `new FileSessionStore(path)`, etc.) for non-Quarkus hosts.
 - Built for Java 21 (records, sealed interfaces, pattern-matching `switch`)
   and targets `quarkus-bom` 3.15.1.
+
+## Documentation
+
+- **[AGENT.md](./AGENT.md)** - Complete guide for AI agent integration, multi-agent orchestration, and streaming
+- **[MODERN_TUI_FEATURES.md](./MODERN_TUI_FEATURES.md)** - Modern TUI components (Header, ChatBox, Command Palette, Streaming)
+- **[CHANGELOG.md](./CHANGELOG.md)** - Version history and changes
 
 ## Not included
 

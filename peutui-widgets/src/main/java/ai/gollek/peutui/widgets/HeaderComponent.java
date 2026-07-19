@@ -52,6 +52,24 @@ public final class HeaderComponent implements Component {
         tabs.add(tab);
         return this;
     }
+    
+    /**
+     * Adds a special statistics/dashboard tab that can be used to display
+     * token usage and performance metrics.
+     * 
+     * @param statsTracker the statistics tracker to monitor
+     * @return this header for chaining
+     */
+    public HeaderComponent addStatsTab(ai.gollek.peutui.widgets.stats.ChatStatsTracker statsTracker) {
+        tabs.add(new Tab("📊 Stats", "stats", true));
+        // Optionally set up listener to update badge or indicator
+        if (statsTracker != null) {
+            statsTracker.addListener(event -> {
+                // Could add visual indicator here (e.g., badge count)
+            });
+        }
+        return this;
+    }
 
     public HeaderComponent clearTabs() {
         tabs.clear();

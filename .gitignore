@@ -1,6 +1,30 @@
-target/
+```
+# Java/Maven build artifacts
 *.class
+*.jar
+*.war
+*.ear
+target/
+
+# Dependencies
+lib/
+libs/
+
+# IDE files
 .idea/
 *.iml
+*.ipr
+*.iws
 .vscode/
-.peutui/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+```
